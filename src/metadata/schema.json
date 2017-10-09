@@ -18,8 +18,9 @@
         ]
     },
     "steps": [
-        "Sign in https://portal.azure.com",
-        "Add new API subscription."
+        "Sign in https://azure.microsoft.com/ru-ru/try/cognitive-services/",
+        "Search Bing Autosuggest API.",
+        ""
     ],
     "blocks": [
         {
@@ -69,7 +70,7 @@
                 }
             ],
             "vendorRequest": {
-                "url": "https:\/\/api.cognitive.microsoft.com\/bing\/v7.0\/Suggestions",
+                "url": "https:\/\/api.cognitive.microsoft.com\/bing\/v5.0\/Suggestions",
                 "method": "get",
                 "requestParameters": [
                     {

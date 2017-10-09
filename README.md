@@ -6,8 +6,9 @@ The Autosuggest API lets you send a partial search query term to Bing and get ba
 * Credentials: key
 
 ## How to get credentials: 
-1. Sign in [portal.azure.com](https://portal.azure.com).
-2. Add new API subscription.
+1. Sign in [portal.azure.com](https://azure.microsoft.com/ru-ru/try/cognitive-services/).
+2. Search Bing Autosuggest API.
+3. Click Get API key.
 
 ## Custom datatypes: 
    |Datatype|Description|Example
