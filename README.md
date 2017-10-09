@@ -24,8 +24,8 @@ Return suggestions for requested query.
 | Field      | Type       | Description
 |------------|------------|----------
 | key        | Credentials| Your API key
-| countryCode| String     | A 2-character country code of the country where the results come from. For a list of possible values, see Market Codes.
-| market     | String     | The market where the results come from. Typically, mkt is the country where the user is making the request from. However, it could be a different country if the user is not located in a country where Bing delivers results. 
+| countryCode| String     | A 2-character country code of the country where the results come from. For a list of possible values, see Market Codes. [Read more](https://docs.microsoft.com/en-us/rest/api/cognitiveservices/bing-autosuggest-api-v7-reference#market-codes)
+| market     | String     | The market where the results come from. Typically, mkt is the country where the user is making the request from. However, it could be a different country if the user is not located in a country where Bing delivers results. [Read more](https://docs.microsoft.com/en-us/rest/api/cognitiveservices/bing-autosuggest-api-v7-reference#market-codes)
 | query      | String     | The user's search query string. The query string must not be empty. If empty or not specified, the list of suggestions in the response is empty.
 | setLang    | String     | The language to use for user interface strings. Specify the language using the ISO 639-1 2-letter language code. For example, the language code for English is EN. The default is EN (English).
 
