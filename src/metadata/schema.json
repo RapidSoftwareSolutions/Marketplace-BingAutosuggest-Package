@@ -1,0 +1,99 @@
+{
+    "package": "BingAutosuggest",
+    "tagline": "BingAutosuggest API",
+    "description": "The Autosuggest API lets you send a partial search query term to Bing and get back a list of suggested queries that other users have searched on. In addition to including searches made by others, the list may include suggestions based on user intent.",
+    "image": "https:\/\/logo.clearbit.com\/bing.com",
+    "repo": "https:\/\/github.com\/RapidSoftwareSolutions\/Marketplace-BingAutosuggest-Package",
+    "keywords": [
+        "API",
+        "search",
+        "suggest",
+        "bing",
+        "microsoft"
+    ],
+    "accounts": {
+        "domain": "https:\/\/www.bing.com",
+        "credentials": [
+            "key"
+        ]
+    },
+    "steps": [
+        "Sign in https://portal.azure.com.",
+        "Add new API subscription."
+    ],
+    "blocks": [
+        {
+            "name": "getSuggestions",
+            "description": "Return suggestions for requested query.",
+            "args": [
+                {
+                    "name": "key",
+                    "type": "credentials",
+                    "info": "Your API key",
+                    "required": true
+                },
+                {
+                    "name": "countryCode",
+                    "type": "String",
+                    "info": "A 2-character country code of the country where the results come from. For a list of possible values, see Market Codes.",
+                    "required": false,
+                    "vendorSchema": {
+                        "name": "cc"
+                    }
+                },
+                {
+                    "name": "market",
+                    "type": "String",
+                    "info": "The market where the results come from. Typically, mkt is the country where the user is making the request from. However, it could be a different country if the user is not located in a country where Bing delivers results. ",
+                    "required": false,
+                    "vendorSchema": {
+                        "name": "mkt"
+                    }
+                },
+                {
+                    "name": "query",
+                    "type": "String",
+                    "info": "The user's search query string. The query string must not be empty. If empty or not specified, the list of suggestions in the response is empty.",
+                    "required": true,
+                    "vendorSchema": {
+                        "name": "q"
+                    }
+                },
+                {
+                    "name": "setLang",
+                    "type": "String",
+                    "info": "The language to use for user interface strings. Specify the language using the ISO 639-1 2-letter language code. For example, the language code for English is EN. The default is EN (English).",
+                    "required": false
+                }
+            ],
+            "vendorRequest": {
+                "url": "https:\/\/api.cognitive.microsoft.com\/bing\/v7.0\/Suggestions",
+                "method": "get",
+                "requestParameters": [
+                    {
+                        "type": "query",
+                        "parameters": [
+                            "setLang",
+                            "q",
+                            "mkt",
+                            "cc"
+                        ]
+                    }
+                ],
+                "headers": {
+                    "Ocp-Apim-Subscription-Key": "{$data['key']}"
+                }
+            },
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
+            ]
+        }
+    ]
+}
