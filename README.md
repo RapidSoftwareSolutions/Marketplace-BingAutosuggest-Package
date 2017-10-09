@@ -1,3 +1,5 @@
+[![](https://scdn.rapidapi.com/RapidAPI_banner.png)](https://rapidapi.com/package/BingAutosuggest/functions?utm_source=RapidAPIGitHub_BingAutosuggestFunctions&utm_medium=button&utm_content=RapidAPI_GitHub)
+
 # BingAutosuggest Package
 The Autosuggest API lets you send a partial search query term to Bing and get back a list of suggested queries that other users have searched on. In addition to including searches made by others, the list may include suggestions based on user intent.
 * Domain: [bing.com](https://www.bing.com)
