@@ -23,7 +23,7 @@ $app->post('/api/BingAutosuggest/getSuggestions', function ($request, $response)
     
 
     $client = $this->httpClient;
-    $query_str = "https://api.cognitive.microsoft.com/bing/v5.0/Suggestions";
+    $query_str = "https://api.cognitive.microsoft.com/bing/v7.0/Suggestions";
 
     
 
